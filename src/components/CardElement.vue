@@ -27,5 +27,10 @@ li {
   img {
     width: 100%;
   }
+
+  h3 {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
 </style>

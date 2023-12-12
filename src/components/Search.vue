@@ -13,10 +13,10 @@ export default {
     <div class="col-auto">
       <label class="visually-hidden" for="autoSizingSelect">Preference</label>
       <select class="form-select my-3" id="autoSizingSelect">
-        <option selected>Choose...</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option selected>archetype</option>
+        <option value="1">Alien</option>
+        <option value="2">Unchained</option>
+        <option value="3">Jq's</option>
       </select>
     </div>
   </form>
