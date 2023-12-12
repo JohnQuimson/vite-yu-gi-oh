@@ -14,9 +14,18 @@ export default {
     <div class="cont-img">
       <img :src="img" :alt="name" />
     </div>
-    <h3>{{ name }}</h3>
-    <span>{{ archetype }}</span>
+    <h3 class="text-white text-uppercase fs-6 text-center py-3">{{ name }}</h3>
+    <p class="text-center fs-5">{{ archetype }}</p>
   </li>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+li {
+  width: calc((100% - 100px) / 5);
+  background-color: #d48f38;
+
+  img {
+    width: 100%;
+  }
+}
+</style>

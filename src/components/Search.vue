@@ -9,10 +9,10 @@ export default {
 </script>
 
 <template>
-  <form class="row gy-2 gx-3 align-items-center">
+  <form class="row">
     <div class="col-auto">
       <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-      <select class="form-select" id="autoSizingSelect">
+      <select class="form-select my-3" id="autoSizingSelect">
         <option selected>Choose...</option>
         <option value="1">One</option>
         <option value="2">Two</option>

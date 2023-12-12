@@ -27,7 +27,7 @@ export default {
   <section class="found">
     <span>Found: {{ store.cards.length }} cards</span>
   </section>
-  <ul class="d-flex flex-wrap">
+  <ul class="d-flex flex-wrap px-2">
     <CardElement
       v-for="card in store.cards"
       :name="card.name"
@@ -39,7 +39,18 @@ export default {
 
 <style lang="scss">
 .found {
+  display: flex;
   background-color: #212529;
   color: #ffff;
+  height: 55px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 15px;
+  margin: 0 8px;
+}
+
+ul {
+  gap: 25px;
 }
 </style>
