@@ -17,5 +17,18 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use '../assets/scss/main.scss' as *;
+header {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+
+  .cont-img {
+    height: 50px;
+    margin: 25px;
+
+    img {
+      height: 100%;
+    }
+  }
+}
 </style>
