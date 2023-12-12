@@ -24,12 +24,12 @@ export default {
 </script>
 
 <template>
-  <section>
+  <section class="found">
     <span>Found: {{ store.cards.length }} cards</span>
   </section>
   <ul class="d-flex flex-wrap">
     <CardElement
-      v-for="card in cards"
+      v-for="card in store.cards"
       :name="card.name"
       :archetype="card.archetype"
       :img="card.card_images[0].image_url"
@@ -37,4 +37,9 @@ export default {
   </ul>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.found {
+  background-color: #212529;
+  color: #ffff;
+}
+</style>
