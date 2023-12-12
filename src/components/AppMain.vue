@@ -1,12 +1,18 @@
 <script>
 import Search from './Search.vue';
 import CardsList from './CardsList.vue';
+import { store } from '../store';
 
 export default {
   name: 'Main',
   components: {
     Search,
     CardsList,
+  },
+  data() {
+    return {
+      store,
+    };
   },
 };
 </script>

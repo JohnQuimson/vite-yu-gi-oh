@@ -1,28 +1,32 @@
 <script>
 import axios from 'axios';
 import CardElement from './CardElement.vue';
+import { store } from '../store';
 
 export default {
   name: 'CardsList',
   components: {
     CardElement,
   },
+
   data() {
     return {
-      cards: [],
-      apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
+      store,
     };
   },
   created() {
-    axios.get(this.apiUrl).then((response) => {
-      this.cards = response.data.data;
-      console.log(this.cards);
+    axios.get(store.apiUrl).then((response) => {
+      store.cards = response.data.data;
+      // console.log(store.cards);
     });
   },
 };
 </script>
 
 <template>
+  <section>
+    <span>Found: {{ store.cards.length }} cards</span>
+  </section>
   <ul class="d-flex flex-wrap">
     <CardElement
       v-for="card in cards"
