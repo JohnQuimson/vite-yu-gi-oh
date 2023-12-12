@@ -1,10 +1,12 @@
 <script>
 import Search from './Search.vue';
+import CardsList from './CardsList.vue';
 
 export default {
   name: 'Main',
   components: {
     Search,
+    CardsList,
   },
 };
 </script>
@@ -14,7 +16,9 @@ export default {
     <div class="container">
       <Search />
     </div>
-    <div class="container">cards</div>
+    <div class="container">
+      <CardsList />
+    </div>
   </main>
 </template>
 
