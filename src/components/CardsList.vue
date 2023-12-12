@@ -23,7 +23,14 @@ export default {
 </script>
 
 <template>
-  <CardElement v-for="card in cards" />
+  <ul class="d-flex flex-wrap">
+    <CardElement
+      v-for="card in cards"
+      :name="card.name"
+      :archetype="card.archetype"
+      :img="card.card_images[0].image_url"
+    />
+  </ul>
 </template>
 
 <style lang="scss"></style>
