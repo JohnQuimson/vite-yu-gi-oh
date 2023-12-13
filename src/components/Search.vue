@@ -6,6 +6,11 @@ export default {
       searchKey: '',
     };
   },
+  methods: {
+    testEvent() {
+      console.log('Ho cliccato l evento');
+    },
+  },
   components: {},
 };
 </script>
@@ -18,6 +23,7 @@ export default {
         class="form-select my-3"
         id="autoSizingSelect"
         v-model="searchKey"
+        @change="testEvent"
       >
         <option selected hidden value="">archetype</option>
         <option value="default">All</option>
