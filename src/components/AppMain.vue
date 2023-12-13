@@ -22,7 +22,7 @@ export default {
     <div class="container">
       <Search />
     </div>
-    <div class="container bg-white p-5">
+    <div class="main-cont container bg-white p-5">
       <CardsList />
     </div>
   </main>

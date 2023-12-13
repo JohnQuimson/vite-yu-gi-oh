@@ -17,8 +17,7 @@ export default {
   created() {
     axios.get(store.apiUrl).then((response) => {
       store.cards = response.data.data;
-
-      // console.log(store.cards);
+      console.log(`Loading: ${store.loading}`);
     });
   },
 };
@@ -28,30 +27,29 @@ export default {
   <section class="found">
     <span>Found: {{ store.cards.length }} cards</span>
   </section>
-  <ul class="d-flex flex-wrap px-2">
-    <CardElement
+  <div class="cards-list row gy-3">
+    <div
+      class="col-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2"
       v-for="card in store.cards"
-      :name="card.name"
-      :archetype="card.archetype"
-      :img="card.card_images[0].image_url"
-    />
-  </ul>
+    >
+      <CardElement
+        :name="card.name"
+        :archetype="card.archetype"
+        :img="card.card_images[0].image_url"
+      />
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
-.found {
-  display: flex;
+section {
+  height: 50px;
   background-color: #212529;
-  color: #ffff;
-  height: 55px;
+  color: white;
+  display: flex;
   align-items: center;
   font-size: 18px;
-  font-weight: 700;
-  padding-left: 15px;
-  margin: 0 8px;
-}
-
-ul {
-  gap: 25px;
+  font-weight: 600;
+  padding-left: 10px;
 }
 </style>

@@ -2,7 +2,9 @@
 export default {
   name: 'Search',
   data() {
-    return {};
+    return {
+      searchKey: '',
+    };
   },
   components: {},
 };
@@ -12,11 +14,16 @@ export default {
   <form class="row">
     <div class="col-auto">
       <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-      <select class="form-select my-3" id="autoSizingSelect">
-        <option selected>archetype</option>
-        <option value="1">Alien</option>
-        <option value="2">Unchained</option>
-        <option value="3">Jq's</option>
+      <select
+        class="form-select my-3"
+        id="autoSizingSelect"
+        v-model="searchKey"
+      >
+        <option selected hidden value="">archetype</option>
+        <option value="default">All</option>
+        <option value="Alien">Alien</option>
+        <option value="Unchained">Unchained</option>
+        <option value="Jq's">Jq's</option>
       </select>
     </div>
   </form>
