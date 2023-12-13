@@ -14,13 +14,18 @@ export default {
       store,
     };
   },
+  methods: {
+    filterCards() {
+      console.log('Call dal figlio');
+    },
+  },
 };
 </script>
 
 <template>
   <main>
     <div class="container">
-      <Search />
+      <Search @search="filterCards" />
     </div>
     <div class="main-cont container bg-white p-5">
       <CardsList />
