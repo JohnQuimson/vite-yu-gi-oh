@@ -1,12 +1,20 @@
 <script>
+import axios from 'axios';
+import { store } from '../store';
+
 export default {
   name: 'Search',
   data() {
     return {
-      searchKey: '',
+      store,
     };
   },
   methods: {},
+  created() {
+    axios.get(store.endPointArchetypeUrl).then((response) => {
+      store.arrArchetypes = response.data;
+    });
+  },
   components: {},
 };
 </script>
@@ -18,14 +26,17 @@ export default {
       <select
         class="form-select my-3"
         id="autoSizingSelect"
-        v-model="searchKey"
+        v-model="this.store.searchKey"
         @change="$emit('search')"
       >
         <option selected hidden value="">archetype</option>
         <option value="default">All</option>
-        <option value="Alien">Alien</option>
-        <option value="Unchained">Unchained</option>
-        <option value="Jq's">Jq's</option>
+        <option
+          v-for="archetype in store.arrArchetypes"
+          :value="archetype.archetype_name"
+        >
+          {{ archetype.archetype_name }}
+        </option>
       </select>
     </div>
   </form>

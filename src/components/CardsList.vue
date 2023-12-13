@@ -1,5 +1,4 @@
 <script>
-import axios from 'axios';
 import CardElement from './CardElement.vue';
 import { store } from '../store';
 
@@ -13,12 +12,6 @@ export default {
     return {
       store,
     };
-  },
-  created() {
-    axios.get(store.apiUrl).then((response) => {
-      store.cards = response.data.data;
-      console.log(`Loading: ${store.loading}`);
-    });
   },
 };
 </script>
