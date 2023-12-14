@@ -15,7 +15,6 @@ export default {
       store.arrArchetypes = response.data;
     });
   },
-  components: {},
 };
 </script>
 
@@ -26,11 +25,11 @@ export default {
       <select
         class="form-select my-3"
         id="autoSizingSelect"
-        v-model="this.store.searchKey"
-        @change="$emit('search')"
+        v-model="this.store.archetypeKey"
+        @change="$emit('call')"
       >
         <option selected hidden value="">archetype</option>
-        <option value="default">All</option>
+        <option class="bg-secondary text-white" value="">All</option>
         <option
           v-for="archetype in store.arrArchetypes"
           :value="archetype.archetype_name"
