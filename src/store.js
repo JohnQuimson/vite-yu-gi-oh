@@ -6,6 +6,6 @@ export const store = reactive({
   cards: [],
   arrArchetypes: [],
   archetypeKey: '',
-  apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=2000&offset=0',
+  apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=2002&offset=0',
   endPointArchetypeUrl: 'https://db.ygoprodeck.com/api/v7/archetypes.php',
 });
